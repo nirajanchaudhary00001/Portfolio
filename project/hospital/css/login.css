@@ -1,0 +1,138 @@
+/* Basic Reset and Variables */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #45a049;
+    --text-color: #fff;
+    --input-bg: rgba(255, 255, 255, 0.3);
+    --input-focus-bg: rgba(255, 255, 255, 0.7);
+    --border-radius: 10px;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --transition-speed: 0.3s;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Full page background */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://cdn.britannica.com/12/130512-004-AD0A7CA4/campus-Riverside-Ottawa-The-Hospital-Ont.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(90%);
+    z-index: -1;
+}
+
+/* Title */
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background-image: linear-gradient(45deg, #4CAF50, #45a049);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: glowing 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50, 0 0 15px #4CAF50, 0 0 20px #4CAF50, 0 0 30px #4CAF50, 0 0 40px #4CAF50;
+    }
+    100% {
+        text-shadow: 0 0 10px #45a049, 0 0 20px #45a049, 0 0 30px #45a049, 0 0 40px #45a049, 0 0 50px #45a049, 0 0 60px #45a049;
+    }
+}
+
+/* Form Container */
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    color: var(--text-color);
+    width: 350px;
+    text-align: center;
+}
+
+/* Form Input Fields */
+.input-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: var(--input-bg);
+    color: #333;
+    font-size: 16px;
+    transition: background-color var(--transition-speed), border var(--transition-speed);
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    background-color: var(--input-focus-bg);
+    outline: none;
+    border: 1px solid var(--primary-color);
+}
+
+/* Submit Button */
+button.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+button.submit-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Placeholder Styling */
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus::placeholder {
+    color: var(--primary-color);
+}
+
+/* Error Message Styling */
+.error {
+    color: #f44336;
+    margin-top: 10px;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 600px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+}

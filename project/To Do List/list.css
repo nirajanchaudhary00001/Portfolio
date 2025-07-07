@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' sans-serif;
+}
+body{
+    background-color: rgb(68, 115, 158);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input-group {
+    display: flex;
+    gap: 8px; /* spacing between input and button */
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+    justify-content: center;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    padding: 12px;
+    margin-block: 12px;
+    border-radius: 4px;
+    font-size: 15;
+}
+
+.input-group input[type="text"]{
+    width: 70%;
+}
+
+.input-group input[type="button"]{
+    background-color: green;
+    /* color: red; */
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 12px 24px;
+}
+
+.input-group input[type="button"]:hover {
+    background-color: cyan;
+}
+ul{
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    /* justify-content: center;
+    flex-direction: column;
+    align-items: center; */
+    flex-direction: column;
+
+}
+ul li {
+    list-style-type: none;
+    cursor: pointer;
+    margin-block-end: 12px;
+    border-radius: 8px;
+    border: 0.125px solid;
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.5s;
+    gap: 0.5rem;
+
+}
+
+ul li p{
+    flex-grow: 1;
+    padding: 2px;
+}
+.btn{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: none;
+    font-weight: 600;
+    cursor:pointer;
+    padding: 1px;
+}
+.deleteBtn{
+    color: red;
+    background-color: none;
+}
+.editBtn{
+    color: #008000;
+}
+
+.editBtn,
+.deleteBtn {
+    border: none;
+    background: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Add these styles to your list.css or in the <style> tag in HTML */
+ul#todolist {
+    list-style-type: none;
+    padding-left: 0;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+ul#todolist li {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+ul#todolist li:hover {
+    background-color: #bacaca; /* Light green on hover */
+}
+
+ul#todolist li p {
+    margin: 0;
+    flex-grow: 1;
+    padding: 0 10px;
+}

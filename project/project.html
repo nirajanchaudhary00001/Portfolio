@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project </title>
+    <style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #1e1e2f;
+        color: #f1f1f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        padding: 2rem;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    .container > div {
+        background: #2c2c3e;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container > div:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    }
+
+    a {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        text-decoration: none;
+        color: #61dafb;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: #4dd0e1;
+    }
+
+    button {
+        margin: 0.3rem 0;
+        padding: 0.6rem 1.2rem;
+        background-color: #61dafb;
+        color: #1e1e2f;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    button:hover {
+        background-color: #4dd0e1;
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+        .container {
+            padding: 1rem;
+        }
+
+        a {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <div>
+            <a href="currency converter/index.html">Currency Converter</a>
+            <button>Github</button>
+            <button onclick="location.href='currency converter/index.html'" target="_blank">Live Demo</button>
+        </div>
+            <div>
+            <a href="calculator/calculator.html">Calculator</a>
+            <button>Github</button>
+            <button onclick="location.href='calculator/calculator.html'">Live Demo</button>
+        </div>
+            <div>
+            <a href="DigitalClock/index.html">Digital Clock</a>
+            <button>Github</button>
+            <button onclick="location.href='DigitalClock/index.html'">Live Demo</button>
+        </div>    <div>
+            <a href="passwordGenerator/generator.html">Password Generator</a>
+            <button>Github</button>
+            <button onclick="location.href='passwordGenerator/generator.html'">Live Demo</button>
+        </div>    <div>
+            <a href="rock,paper,scissor/game.html">Rock Paper Scissor</a>
+            <button>Github</button>
+            <button onclick="location.href='rock,paper,scissor/game.html'">Live Demo</button>
+        </div>    <div>
+            <a href="tic-tac-toe/tic.html">Tic-Tac_toe</a>
+            <button>Github</button>
+            <button onclick="location.href='tic-tac-toe/tic.html'">Live Demo</button>
+        </div>    <div>
+            <a href="To Do List/list.html">To Do List</a>
+            <button>Github</button>
+            <button onclick="location.href='To Do List/list.html'">Live Demo</button>
+        </div>
+    </div>
+    </body>
+</html>

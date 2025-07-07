@@ -1,0 +1,138 @@
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling to center the container */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4e4ba;
+  font-family: Arial, sans-serif;
+}
+
+/* Container styling */
+.container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 320px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+.container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Input field styling */
+form input[type="text"] {
+  width: 100%;
+  height: 3rem;
+  padding: 0 0.5rem;
+  border: 1px solid lightgray;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Dropdown section styling */
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Individual dropdown styling */
+.from, .to {
+  flex: 1;
+}
+
+/* Select container styling */
+.select-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgray;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f9f9f9;
+}
+
+/* Flag image styling */
+.select-container img {
+  width: 24px;
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+/* Select element styling */
+.select-container select {
+  border: none;
+  background: none;
+  font-size: 1rem;
+  outline: none;
+  width: 100%;
+}
+
+/* Exchange icon styling */
+.fa-arrow-right-arrow-left {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  color: #333;
+}
+
+/* Exchange rate message styling */
+.msg {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  border-radius: 0.75rem;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 400px) {
+  .container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .dropdown {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .fa-arrow-right-arrow-left {
+    transform: rotate(90deg);
+    margin: 1rem 0;
+  }
+}
